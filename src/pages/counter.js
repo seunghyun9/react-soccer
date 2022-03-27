@@ -1,15 +1,14 @@
-import React, {useState} from "react";
-export default function Counter() {
-    const [count, setCount] = useState(0);
-    return <HomeDiv>
-    <button onClick={() => setCount(count-1)}>-</button>
-    <button onClick={() => setCount(count+1)}>+</button> 
+import React,{useState} from "react"
+
+
+export default function Home() {
+  const [count, setCount] = useState(0)
+
+  return (
+    <>
+    <button onClick={() => setCount(count + 1)}>+</button><br />
+    <button onClick={() => setCount(count - 1)}>-</button> <br/>
     <div>{count}</div>
-    </HomeDiv>
-}   
-
-
-const HomeDiv = styled.div`
-width: '200px'
-margin: 0 auto
-`
+    </>
+  )
+}
